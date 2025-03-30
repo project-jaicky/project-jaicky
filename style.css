@@ -1,0 +1,121 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff5f6d, #ffc3a0, #ff6a00, #d64b50, #f2c14e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: rgb(255, 47, 47);
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out; 
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: slideInFromTop 1.2s ease-in-out; 
+}
+
+
+.bmi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+label {
+    font-size: 1.1em;
+    color: #333;
+    text-align: left;
+}
+
+input {
+    padding: 12px;
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #ff6a00; 
+    outline: none;
+}
+
+
+button {
+    background-color: #ff6a00;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: buttonPulse 2s infinite; 
+}
+
+button:hover {
+    background-color: #ff8c1a; 
+}
+
+
+#result {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ff6a00; 
+}
+
+/* Keyframe animations */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
